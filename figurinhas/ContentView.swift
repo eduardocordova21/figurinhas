@@ -34,30 +34,10 @@ struct ContentView: View {
                     .frame(width: 75)
                   
                 VStack(alignment: .leading) {
-                    HStack {
-                        Image(systemName: "lifepreserver")
-                            .foregroundColor(Color.green)
-                            .frame(width: 30)
-                            .font(.system(size: 30))
-                          
-                        Text("Vidas: ")
-                                                
-                        Text("2")
-                            .padding(.trailing)
-                    }
                     
-                    HStack {
-                        Image(systemName: "bolt")
-                            .foregroundColor(Color.yellow)
-                            .frame(width: 30)
-                            .font(.system(size: 30))
-                          
-                        Text("Potencia: ")
-                        
-                        Spacer()
-                        
-                        Text("60%")
-                    }
+                    PropriedadesView();
+                    
+                    PropriedadesView(imagem: "bolt", nome: "Potencia: ", vidas: "60%", cor: .yellow)
                 }
             }.padding(30.0)
                  
