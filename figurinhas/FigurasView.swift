@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct FigurasView: View {
+    
+    var figuras = ["Mingle", "Yodel"]
+    
     var body: some View {
-        NavigationLink {
-            FigurinhaDetalheView();
-        } label: {
-            Text("Mingle")
+        
+        List(figuras, id: \.self){ figura in
+            NavigationLink {
+                FigurinhaDetalheView();
+            } label: {
+                Text(figura)
+            }
         }
-
     }
 }
 
