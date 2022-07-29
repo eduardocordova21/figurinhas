@@ -14,6 +14,7 @@
 		C6B076BD2892168800053AAB /* PropriedadesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B076BC2892168800053AAB /* PropriedadesView.swift */; };
 		C6B076BF28921DFD00053AAB /* FigurinhaDetalheView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B076BE28921DFD00053AAB /* FigurinhaDetalheView.swift */; };
 		C6B076C1289369B100053AAB /* FigurasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B076C0289369B100053AAB /* FigurasView.swift */; };
+		C6B076C32893763E00053AAB /* PropriedadeEditarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B076C22893763E00053AAB /* PropriedadeEditarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C6B076BC2892168800053AAB /* PropriedadesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropriedadesView.swift; sourceTree = "<group>"; };
 		C6B076BE28921DFD00053AAB /* FigurinhaDetalheView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigurinhaDetalheView.swift; sourceTree = "<group>"; };
 		C6B076C0289369B100053AAB /* FigurasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigurasView.swift; sourceTree = "<group>"; };
+		C6B076C22893763E00053AAB /* PropriedadeEditarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropriedadeEditarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				C6B076BC2892168800053AAB /* PropriedadesView.swift */,
 				C6B076BE28921DFD00053AAB /* FigurinhaDetalheView.swift */,
 				C6B076C0289369B100053AAB /* FigurasView.swift */,
+				C6B076C22893763E00053AAB /* PropriedadeEditarView.swift */,
 			);
 			path = figurinhas;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				C6B07693288B87BB00053AAB /* ContentView.swift in Sources */,
 				C6B07691288B87BB00053AAB /* figurinhasApp.swift in Sources */,
 				C6B076C1289369B100053AAB /* FigurasView.swift in Sources */,
+				C6B076C32893763E00053AAB /* PropriedadeEditarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
