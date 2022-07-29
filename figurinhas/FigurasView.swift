@@ -9,15 +9,19 @@ import SwiftUI
 
 struct FigurasView: View {
     
+    @State var isPresented = false
+    
     var figuras = ["Mingle", "Yodel"]
     
     var body: some View {
         
         List(figuras, id: \.self){ figura in
-            NavigationLink {
-                FigurinhaDetalheView();
+            Button {
+                isPresented = true;
             } label: {
                 Text(figura)
+            }.sheet(isPresented: $isPresented) {
+                FigurinhaDetalheView();
             }
         }
     }
