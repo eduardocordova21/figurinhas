@@ -10,20 +10,27 @@ import SwiftUI
 struct FigurasView: View {
     
     @State var isPresented = false
-    
-    var figuras = ["Mingle", "Yodel"]
-    
+        
     var body: some View {
         
-        List(figuras, id: \.self){ figura in
+        List(figuras){ figura in
             Button {
                 isPresented = true;
             } label: {
-                Text(figura)
+                HStack(){
+                    Image(figura.imagem+"_p")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 50, height: 50)
+                        .background(Color.gray)
+                        .containerShape(Circle())
+                    Text(figura.nome)
+                }
             }.sheet(isPresented: $isPresented) {
-                FigurinhaDetalheView();
+                FigurinhaDetalheView(figura: figura);
             }
-        }
+        }.navigationTitle("Figuras")
+        
     }
 }
 

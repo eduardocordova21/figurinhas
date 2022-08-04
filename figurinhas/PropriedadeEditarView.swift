@@ -8,13 +8,36 @@
 import SwiftUI
 
 struct PropriedadeEditarView: View {
+    
+    @Binding var valor: String;
+    @Binding var valorInt: Int;
+    @Binding var valorDouble: Double;
+    var tipo: TipoDaPropriedade = TipoDaPropriedade.tipoInteiro
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack(){
+            if(tipo == TipoDaPropriedade.tipoInteiro){
+                Stepper("valor Atual: \(valorInt)", value: $valorInt)
+            }
+            
+            if(tipo == TipoDaPropriedade.tipoDouble){
+                Text("Valor Atual: \(valorDouble * 100, specifier: "%.0f")%")
+                Slider(value: $valorDouble)
+            }
+            
+            if(tipo == TipoDaPropriedade.tipoTexto){
+                TextEditor(text: $valor)
+            }
+            
+            Spacer()
+        }.padding()
+       
     }
 }
 
 struct PropriedadeEditarView_Previews: PreviewProvider {
     static var previews: some View {
-        PropriedadeEditarView()
+        PropriedadeEditarView(valor: .constant(""), valorInt: .constant(1), valorDouble: .constant(1.0), tipo: TipoDaPropriedade.tipoDouble)
     }
 }

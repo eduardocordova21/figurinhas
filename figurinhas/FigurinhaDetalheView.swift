@@ -10,7 +10,7 @@ import SwiftUI
 struct FigurinhaDetalheView: View {
     
     @State var itensNaColecao: Int = 0
-
+    var figura: Figura
     
     var body: some View {
         VStack(alignment: .leading){
@@ -18,27 +18,25 @@ struct FigurinhaDetalheView: View {
                 Text("Frase: ")
                     .bold()
                 
-                Text("\"Problema em dobro\"")
+                Text("\"\(figura.frase)\"")
             }.padding()
             
             HStack(){
-                Image("figura_01")
+                Image(figura.imagem)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 75)
                   
                 VStack(alignment: .leading) {
-                    
-                    PropriedadesView();
-                    
-                    PropriedadesView(imagem: "bolt", nome: "Potencia: ", vidas: "60%", cor: .yellow)
+                    PropriedadesView(imagem: "lifepreserver", nome: "Vidas: ", valorInt: figura.vidas, cor: .green, tipo: TipoDaPropriedade.tipoInteiro)
+                    PropriedadesView(imagem: "bolt", nome: "Potencia: ", valorDouble: figura.potencia, cor: .yellow, tipo: TipoDaPropriedade.tipoDouble)
                 }
             }.padding(30.0)
                  
             HStack(){
                 Spacer()
                 
-                Text("Mingle se destaca por fazer o dobro do trabalho na metade do tempo, com extrema precisão. Essas habilidades são úteis para ela em sua função de Analista de Dados Sênior para uma empresa internacional de computação em nuvem. Ela também tem uma propensão para dança de salão, dança de linha e praticamente qualquer tipo de atividade que a deixe dançar ao som da música.")
+                Text(figura.descricao)
                     .fontWeight(.light)
                     .foregroundColor(Color.gray)
                     
@@ -71,13 +69,13 @@ struct FigurinhaDetalheView: View {
             }
             .padding()
         }.navigationTitle(
-            Text("Mingle")
+            Text(figura.nome)
         )
     }
 }
 
 struct FigurinhaDetalheView_Previews: PreviewProvider {
     static var previews: some View {
-        FigurinhaDetalheView()
+        FigurinhaDetalheView(figura: figuras[0])
     }
 }
