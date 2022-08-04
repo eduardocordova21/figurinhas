@@ -26,6 +26,10 @@ class Figura: Identifiable, ObservableObject {
     }
 }
 
+class MinhaColecao: ObservableObject{
+    @Published var figuras: [Figura] = []
+}
+
 var figuras = [
     Figura(
         nome:"Mingle",

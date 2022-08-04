@@ -9,8 +9,9 @@ import SwiftUI
 
 struct FigurinhaDetalheView: View {
     
-    @State var itensNaColecao: Int = 0
     @ObservedObject var figura: Figura
+    
+    @EnvironmentObject var minhaColecao: MinhaColecao
     
     var body: some View {
         VStack(alignment: .leading){
@@ -49,16 +50,16 @@ struct FigurinhaDetalheView: View {
                 Spacer()
                 
                 Button {
-                    itensNaColecao += 1
+                    minhaColecao.figuras.append(figura)
                 } label: {
                     
-                    if(itensNaColecao == 0){
+                    if(minhaColecao.figuras.count == 0){
                         Text("Adicionar à coleção")
                             .foregroundColor(Color.white)
                             .padding()
                             .background(Color.blue)
                     }else{
-                        Text("Na sua colecao: \(itensNaColecao)")
+                        Text("Na sua colecao: \(minhaColecao.figuras.count)")
                             .padding()
                             .background(Color.green)
                     }

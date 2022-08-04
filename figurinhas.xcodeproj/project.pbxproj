@@ -16,6 +16,7 @@
 		C6B076C1289369B100053AAB /* FigurasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B076C0289369B100053AAB /* FigurasView.swift */; };
 		C6B076C32893763E00053AAB /* PropriedadeEditarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B076C22893763E00053AAB /* PropriedadeEditarView.swift */; };
 		C6B076C528937B5800053AAB /* ModeloDados.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B076C428937B5800053AAB /* ModeloDados.swift */; };
+		C6BF4D63289B7DBB00AD5314 /* MinhaColecaoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6BF4D62289B7DBB00AD5314 /* MinhaColecaoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		C6B076C0289369B100053AAB /* FigurasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FigurasView.swift; sourceTree = "<group>"; };
 		C6B076C22893763E00053AAB /* PropriedadeEditarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropriedadeEditarView.swift; sourceTree = "<group>"; };
 		C6B076C428937B5800053AAB /* ModeloDados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloDados.swift; sourceTree = "<group>"; };
+		C6BF4D62289B7DBB00AD5314 /* MinhaColecaoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinhaColecaoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				C6B076C0289369B100053AAB /* FigurasView.swift */,
 				C6B076C22893763E00053AAB /* PropriedadeEditarView.swift */,
 				C6B076C428937B5800053AAB /* ModeloDados.swift */,
+				C6BF4D62289B7DBB00AD5314 /* MinhaColecaoView.swift */,
 			);
 			path = figurinhas;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				C6B076C1289369B100053AAB /* FigurasView.swift in Sources */,
 				C6B076C528937B5800053AAB /* ModeloDados.swift in Sources */,
 				C6B076C32893763E00053AAB /* PropriedadeEditarView.swift in Sources */,
+				C6BF4D63289B7DBB00AD5314 /* MinhaColecaoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
