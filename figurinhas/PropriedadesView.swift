@@ -19,9 +19,9 @@ struct PropriedadesView: View {
     
     var imagem: String = "";
     var nome: String = "";
-    @State var valor: String = "";
-    @State var valorInt: Int = 0;
-    @State var valorDouble: Double = 1.0;
+    @Binding var valor: String;
+    @Binding var valorInt: Int;
+    @Binding var valorDouble: Double;
     var cor = Color.black;
     var tipo: TipoDaPropriedade = TipoDaPropriedade.tipoInteiro
     
@@ -59,6 +59,6 @@ struct PropriedadesView: View {
 
 struct PropriedadesView_Previews: PreviewProvider {
     static var previews: some View {
-        PropriedadesView()
+        PropriedadesView(valor: .constant(""), valorInt: .constant(0), valorDouble: .constant(1.0))
     }
 }

@@ -7,14 +7,23 @@
 
 import Foundation
 
-struct Figura: Identifiable{
+class Figura: Identifiable, ObservableObject {
     var id = UUID()
     var nome: String
     var imagem: String
     var frase: String
     var descricao: String
-    var vidas: Int
-    var potencia: Double
+    @Published var vidas: Int
+    @Published var potencia: Double
+    
+    init(nome: String, imagem: String, frase: String, descricao: String, vidas: Int, potencia: Double){
+        self.nome = nome
+        self.imagem = imagem
+        self.frase = frase
+        self.descricao = descricao
+        self.vidas = vidas
+        self.potencia = potencia
+    }
 }
 
 var figuras = [

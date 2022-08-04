@@ -10,7 +10,7 @@ import SwiftUI
 struct FigurinhaDetalheView: View {
     
     @State var itensNaColecao: Int = 0
-    var figura: Figura
+    @ObservedObject var figura: Figura
     
     var body: some View {
         VStack(alignment: .leading){
@@ -28,8 +28,8 @@ struct FigurinhaDetalheView: View {
                     .frame(width: 75)
                   
                 VStack(alignment: .leading) {
-                    PropriedadesView(imagem: "lifepreserver", nome: "Vidas: ", valorInt: figura.vidas, cor: .green, tipo: TipoDaPropriedade.tipoInteiro)
-                    PropriedadesView(imagem: "bolt", nome: "Potencia: ", valorDouble: figura.potencia, cor: .yellow, tipo: TipoDaPropriedade.tipoDouble)
+                    PropriedadesView(imagem: "lifepreserver", nome: "Vidas: ", valor: .constant(""),valorInt: $figura.vidas,valorDouble: .constant(1.0), cor: .green, tipo: TipoDaPropriedade.tipoInteiro)
+                    PropriedadesView(imagem: "bolt", nome: "Potencia: ", valor: .constant(""),valorInt: .constant(0),valorDouble: $figura.potencia, cor: .yellow, tipo: TipoDaPropriedade.tipoDouble)
                 }
             }.padding(30.0)
                  
